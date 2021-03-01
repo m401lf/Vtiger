@@ -10,10 +10,9 @@ Feature: Login Page
     Then User is on Dashboard Page
     And User clicks logoff button
 
-    Examples:
+    Examples: 
       | url                             | LoginName       | Password    |
       | https://automationteststore.com | datastudioplace | Manchester1 |
-
 
   Scenario Outline: User should NOT be able to login with invalid credentials
     Given User is on landing page as "<url>"
@@ -24,7 +23,6 @@ Feature: Login Page
     Then User gets a confirmation message
     And User is still in login page as "<Text_Dispalyed>"
 
-    Examples:
+    Examples: 
       | url                             | LoginName            | Password    | Text_Dispalyed     |
       | https://automationteststore.com | datastudioplaceWrong | Manchester1 | RETURNING CUSTOMER |
-
