@@ -3,28 +3,35 @@ package utils;
 import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 
-import pages.AccountDashboardPage;
+import pages.TopMenuHomePage;
+import pages.LeadsPage;
 import pages.BasePage;
-import pages.Account_LoginPage;
-import pages.NavigationPage;
+import pages.HomePage;
+
+import pages.SignInPage;
 
 
-public class DriverFactory {
+
+
+public class DriverFactory{
 	public static WebDriver driver;
-	public static BasePage basePage;
-	public static Account_LoginPage accountLoginPage;
-	public static AccountDashboardPage accountDashboardPage;
-	public static NavigationPage NaviPage;
-
 	
+	public static SignInPage signInPage;
+	public static HomePage homePage;
+	public static LeadsPage leadsPage;
+	public static TopMenuHomePage topMenuHomePage;
+	public static Logger log = LogManager.getLogger(BasePage.class.getName());
 
-	public WebDriver getDriver() {
+	public static WebDriver getDriver() {
 		try {
 			// Read Config
 			Properties p = new Properties();
@@ -34,10 +41,11 @@ public class DriverFactory {
 
 			switch (browserName) {
 
+
 			case "firefox":
 				// code
 				if (null == driver) {
-					System.setProperty("webdriver.gecko.driver", Constant.GECKO_DRIVER_DIRECTORY);
+					System.setProperty("webdriver.gecko.driver", "C:\\drivers\\geckodriver.exe");
 					DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 					capabilities.setCapability("marionette", true);
 					driver = new FirefoxDriver();
@@ -46,7 +54,7 @@ public class DriverFactory {
 
 			case "chrome":
 				// code
-				if (null == driver) {
+				if (browserName.equals(driver)) {
 					System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
 					// CHROME OPTIONS
 					driver = new ChromeDriver();
@@ -58,10 +66,11 @@ public class DriverFactory {
 			System.out.println("Unable to load browser: " + e.getMessage());
 		} finally {
 			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-			accountLoginPage = PageFactory.initElements(driver, Account_LoginPage.class);
-			accountDashboardPage = PageFactory.initElements(driver, AccountDashboardPage.class);
-			basePage = PageFactory.initElements(driver, BasePage.class);
-			NaviPage = PageFactory.initElements(driver, NavigationPage.class);
+			signInPage = PageFactory.initElements(driver, SignInPage.class);
+			homePage = PageFactory.initElements(driver, HomePage.class);
+			leadsPage = PageFactory.initElements(driver, LeadsPage.class);
+			topMenuHomePage = PageFactory.initElements(driver, TopMenuHomePage.class);
+			
 		}
 		return driver;
 	}

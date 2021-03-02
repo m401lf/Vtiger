@@ -12,10 +12,10 @@ import pages.BasePage;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = {"src/test/java/features/Login/"},
+@CucumberOptions(features = {"src/test/java/features/"},
                  glue = {"steps"},
                  monochrome = true,
-                 //tags = {"@LoginUnsuccessful"},
+                 tags = {"@Login"},
 		         //dryRun = True,
                  plugin = {"pretty",
                 		   "html:target/cucumber",

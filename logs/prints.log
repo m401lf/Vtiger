@@ -1,1 +1,1 @@
-07:11:53.146 [main] INFO  pages.BasePage - Successfully clicked on the WebElement: <Proxy element for: DefaultElementLocator 'By.xpath: //body/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[10]/a[1]'>
+08:04:54.408 [main] INFO  pages.BasePage - WebElement is visible using locator: <[[FirefoxDriver: firefox on XP (afb3ba58-f291-4c49-8066-cfab7c60fcff)] -> xpath: //span[contains(text(),' Administrator')]]>
