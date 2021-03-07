@@ -24,19 +24,16 @@ public class HomePage extends BasePage {
 
 	@FindBy(xpath = "//a[contains(text(),'Sign Out')]")
 	public WebElement button_Logout;
-	
+
 	@FindBy(xpath = "//tbody/tr[1]/td[4]/a[1]")
 	public WebElement link_Leads;
-	
-	public WebElement confirmAdministratorText() throws Throwable {
+
+	public WebElement confirmAdministratorTextAndIsDisplayed() throws Throwable {
 		WaitUntilWebElementIsVisible(administrator);
 		System.out.println("The text is Displayed: " + administrator.isDisplayed());
-		System.out.println("The is the CONFIRMATION OF BEING HOMEPAGE: " + administrator.getText());
-		administrator.isDisplayed();
 		Assert.assertTrue(administrator.getText().contains("Admin"));
 		return administrator;
 
 	}
-
 
 }

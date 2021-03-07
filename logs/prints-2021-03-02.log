@@ -1,3 +1,3 @@
-08:04:44.816 [main] INFO  pages.BasePage - WebElement is visible using locator: <[[FirefoxDriver: firefox on XP (afb3ba58-f291-4c49-8066-cfab7c60fcff)] -> xpath: //*[@id='form']/div/div[4]/input]>
-08:04:44.986 [main] INFO  pages.BasePage - Successfully Sent the following keys: 'password' to element: <[[FirefoxDriver: firefox on XP (afb3ba58-f291-4c49-8066-cfab7c60fcff)] -> xpath: //*[@id='form']/div/div[4]/input]>
-08:04:51.949 [main] INFO  pages.BasePage - WebElement is visible using locator: <[[FirefoxDriver: firefox on XP (afb3ba58-f291-4c49-8066-cfab7c60fcff)] -> xpath: //span[contains(text(),' Administrator')]]>
+23:10:59.238 [main] INFO  pages.BasePage - WebElement is visible using locator: <[[FirefoxDriver: firefox on XP (d4f90495-f4e1-4a2c-a89a-2946b6b6f320)] -> xpath: //*[@id='form']/div/div[2]/input]>
+23:10:59.459 [main] INFO  pages.BasePage - Successfully Sent the following keys: 'admin' to element: <[[FirefoxDriver: firefox on XP (d4f90495-f4e1-4a2c-a89a-2946b6b6f320)] -> xpath: //*[@id='form']/div/div[2]/input]>
+23:10:59.727 [main] INFO  pages.BasePage - WebElement is visible using locator: <[[FirefoxDriver: firefox on XP (d4f90495-f4e1-4a2c-a89a-2946b6b6f320)] -> xpath: //*[@id='form']/div/div[4]/input]>

@@ -1,16 +1,12 @@
 package steps;
 
-
 import java.io.IOException;
-
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import utils.DriverFactory;
 
 public class SignInSteps extends DriverFactory {
-
 
 	public SignInSteps() throws IOException {
 		super();
@@ -20,6 +16,13 @@ public class SignInSteps extends DriverFactory {
 	@Given("^I am on the Login page URL \"([^\"]*)\"$")
 	public void i_am_on_the_Login_page_URL(String arg1) throws Throwable {
 		driver.get(arg1);
+
+		/*
+		 * // CODE FOR HANDLING POPUPS//
+		 * 
+		 * if (landingPage.getPopUpSize()> 0) { landingPage.getPopUp().click();
+		 * }
+		 */
 
 	}
 
@@ -32,7 +35,7 @@ public class SignInSteps extends DriverFactory {
 	@When("^I enter username as \"([^\"]*)\"$")
 	public void i_enter_username_as(String arg1) throws Throwable {
 		signInPage.enterUserName(arg1);
-		
+
 	}
 
 	@When("^I enter password as \"([^\"]*)\"$")
@@ -45,19 +48,20 @@ public class SignInSteps extends DriverFactory {
 		signInPage.clickOnLoginButton();
 
 	}
-	
+
 	@Then("^I should see application homepage$")
 	public void i_should_see_application_homepage() throws Throwable {
-		homePage.confirmAdministratorText();
+		homePage.confirmAdministratorTextAndIsDisplayed();
 	}
 
 	@Then("^I should see administrator text message on home Page$")
 	public void i_should_see_administrator_text_message_on_home_Page() throws Throwable {
-		homePage.confirmAdministratorText();
+		homePage.confirmAdministratorTextAndIsDisplayed();
+		// Assert.assertTrue(homePage.confirmAdministratorTextAndIsDisplayed().isDisplayed());
 	}
-	
-/*	@Then("^I logout home page\\.$")
-	public void i_logout_home_page() throws Throwable {
-		homePage.logoutHomePage();
-	}*/
+
+	/*
+	 * @Then("^I logout home page\\.$") public void i_logout_home_page() throws
+	 * Throwable { homePage.logoutHomePage(); }
+	 */
 }

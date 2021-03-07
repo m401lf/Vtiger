@@ -12,11 +12,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 
-import pages.TopMenuHomePage;
+import pages.TopMenuLandingPage;
 import pages.LeadsPage;
 import pages.BasePage;
 import pages.HomePage;
-
+import pages.LandingPage;
 import pages.SignInPage;
 
 
@@ -28,7 +28,9 @@ public class DriverFactory{
 	public static SignInPage signInPage;
 	public static HomePage homePage;
 	public static LeadsPage leadsPage;
-	public static TopMenuHomePage topMenuHomePage;
+	public static TopMenuLandingPage topMenuLandingPage;
+	public static LandingPage landingPage;
+	
 	public static Logger log = LogManager.getLogger(BasePage.class.getName());
 
 	public static WebDriver getDriver() {
@@ -69,8 +71,8 @@ public class DriverFactory{
 			signInPage = PageFactory.initElements(driver, SignInPage.class);
 			homePage = PageFactory.initElements(driver, HomePage.class);
 			leadsPage = PageFactory.initElements(driver, LeadsPage.class);
-			topMenuHomePage = PageFactory.initElements(driver, TopMenuHomePage.class);
-			
+			topMenuLandingPage = PageFactory.initElements(driver, TopMenuLandingPage.class);
+			landingPage = PageFactory.initElements(driver, LandingPage.class);
 		}
 		return driver;
 	}

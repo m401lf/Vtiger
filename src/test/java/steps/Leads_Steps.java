@@ -10,7 +10,7 @@ public class Leads_Steps extends DriverFactory {
 	
 	@When("^User clicks on leads link$")
 	public void user_clicks_on_leads_link() throws Throwable {
-		topMenuHomePage.ClickLeadsLinkOnHomePage();
+		topMenuLandingPage.ClickLeadsLinkOnHomePage();
 	    
 	}
 

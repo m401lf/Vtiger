@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
-public class TopMenuHomePage extends BasePage {
+public class TopMenuLandingPage extends BasePage {
 
-	public TopMenuHomePage() throws IOException {
+	public TopMenuLandingPage() throws IOException {
 		super();
 
 		// TODO Auto-generated constructor stub
@@ -75,7 +75,6 @@ public class TopMenuHomePage extends BasePage {
 	public WebElement button_Logout;
 
 	public void ClickLeadsLinkOnHomePage() throws Throwable {
-		WaitUntilWebElementIsVisible(link_Leads);
 		waitAndClickElement(link_Leads);
 		Thread.sleep(15000);
 
@@ -87,7 +86,6 @@ public class TopMenuHomePage extends BasePage {
 		System.out.println("This is the current URL: " + getCurrentURL());
 		System.out.println("The text is Displayed: " + administrator.isDisplayed());
 		System.out.println("The is the CONFIRMATION OF BEING HOMEPAGE: " + administrator.getText());
-		administrator.isDisplayed();
 		Assert.assertTrue(administrator.getText().contains("Admin"));
 		return administrator;
 

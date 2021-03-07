@@ -4,7 +4,7 @@
 
 
 <head>
-	<meta charset='utf-8' /> 
+	<meta charset='UTF-8' /> 
 	<meta name='description' content='' />
 	<meta name='robots' content='noodp, noydir' />
 	<meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -15,9 +15,14 @@
 
 		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
 	
-	<title>ExtentReports</title>
+	<title>Automation Reports</title>
 
 	<style type='text/css'>
+			
+            
+                
+            
+        
 	</style>
 </head>
 
@@ -34,11 +39,12 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
 		<!-- report name -->
-		<span class='report-name'>ExtentReports</span>
+		<span class='report-name'>Automation Report</span>
 		
 		<!-- report headline -->
 		<span class='report-headline'></span>
@@ -47,7 +53,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Mar 2, 2021 11:09:46 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Mar 2, 2021 10:56:52 PM</span>
 				</a>
 			</li>
 			<li>
@@ -73,6 +79,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -134,10 +142,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -149,10 +157,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -164,10 +172,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>14</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='71.429%'><span class='strong'>10</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='14.286%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='14.286%'>2</span> others
 				</div>
 			</div>
 		</div>
@@ -181,18 +189,18 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Sign In</span>
-						<span class='test-time'>Mar 2, 2021 11:09:47 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Mar 2, 2021 10:56:52 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='fail'>
 	<div class='category-list'>
 		<span class='category label white-text'>@sanity</span>
 	</div>
-	<span class='duration right label'>0h 0m 46s+837ms</span>
+	<span class='duration right label'>0h 0m 42s+874ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Sign In with valid credential</span>
@@ -238,32 +246,39 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='8' class='node then pass' status='pass'>
+		<li test-id='8' class='node then fail' status='fail'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then I should see application homepage</span>
-				<div class='pre'>passed</div>
+				<div class='pre'><pre>java.lang.ClassCastException: com.sun.proxy.$Proxy38 cannot be cast to org.openqa.selenium.By
+	at pages.HomePage.confirmAdministratorText(HomePage.java:39)
+	at steps.SignInSteps.i_should_see_application_homepage(SignInSteps.java:53)
+	at ?.Then I should see application homepage(SignIn.feature:16)
+</pre></div>
 			
 		</li>
-		<li test-id='9' class='node and pass' status='pass'>
+		<li test-id='9' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And I should see administrator text message on home Page</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
+				<div class='pre'>Taking a screenshot!</div>
+				<div class='pre'><br></div>
+				<div class='pre'><a target="_blank", href=C:\Users\House\eclipse-workspace\Vtiger\output\imgs\Tue_Mar_02_22_57_35_CST_2021.jpg><img src=C:\Users\House\eclipse-workspace\Vtiger\output\imgs\Tue_Mar_02_22_57_35_CST_2021.jpg height=200 width=300></img></a></div>
 			
 		</li>
 	</ul>
 </div>
-<div class='scenariooutline node' test-id='10' status='pass'>
-	<span class='duration right label'>0h 0m 31s+570ms</span>
+<div class='scenariooutline node' test-id='10' status='fail'>
+	<span class='duration right label'>0h 0m 32s+239ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">Sign In with valid credentials</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='11' class='node scenario pass' status='pass'>
+		<li test-id='11' class='node scenario fail' status='fail'>
 			<div class='category-list'>
 				<span class='category label white-text'>@Login</span>
 				<span class='category label white-text'>@sanity</span>
@@ -294,13 +309,20 @@
 						<span class="bdd-step-name">And click on login button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='17' class='node then pass' status='pass'><b>Then</b>
+					<li test-id='17' class='node then fail' status='fail'><b>Then</b>
 						<span class="bdd-step-name">Then I should see application homepage</span>
-							<div class='pre'>passed</div>
+							<div class='pre'><pre>java.lang.ClassCastException: com.sun.proxy.$Proxy38 cannot be cast to org.openqa.selenium.By
+	at pages.HomePage.confirmAdministratorText(HomePage.java:39)
+	at steps.SignInSteps.i_should_see_application_homepage(SignInSteps.java:53)
+	at ?.Then I should see application homepage(SignIn.feature:25)
+</pre></div>
 					</li>
-					<li test-id='18' class='node and pass' status='pass'><b>And</b>
+					<li test-id='18' class='node and skip' status='skip'><b>And</b>
 						<span class="bdd-step-name">And I should see administrator text message on home Page</span>
-							<div class='pre'>passed</div>
+							<div class='pre'>skipped</div>
+							<div class='pre'>Taking a screenshot!</div>
+							<div class='pre'><br></div>
+							<div class='pre'><a target="_blank", href=C:\Users\House\eclipse-workspace\Vtiger\output\imgs\Tue_Mar_02_22_58_12_CST_2021.jpg><img src=C:\Users\House\eclipse-workspace\Vtiger\output\imgs\Tue_Mar_02_22_58_12_CST_2021.jpg height=200 width=300></img></a></div>
 					</li>
 				</ul>
 		</li>
@@ -362,13 +384,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Login</span>
 						<span class='category-status right'>
-							<span class='label pass'>2</span>
+							<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 2</span>
 							
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 					
@@ -383,14 +405,14 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 2, 2021 11:09:47 PM</td>
+										<td>Mar 2, 2021 10:56:52 PM</td>
 										<td class='linked' test-id='1'>Sign In</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Mar 2, 2021 11:10:38 PM</td>
+										<td>Mar 2, 2021 10:57:40 PM</td>
 										<td class='linked' test-id='11'>Sign In.Sign In with valid credentials.Sign In with valid credentials</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -401,13 +423,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@sanity</span>
 						<span class='category-status right'>
-							<span class='label pass'>2</span>
+							<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 2</span>
 							
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 					
@@ -422,14 +444,14 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 2, 2021 11:09:48 PM</td>
+										<td>Mar 2, 2021 10:56:52 PM</td>
 										<td class='linked' test-id='2'>Sign In.Sign In with valid credential</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Mar 2, 2021 11:10:38 PM</td>
+										<td>Mar 2, 2021 10:57:40 PM</td>
 										<td class='linked' test-id='11'>Sign In.Sign In with valid credentials.Sign In with valid credentials</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -448,6 +470,80 @@
 	</div>
 </div>
 <!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.ClassCastException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Mar 2, 2021 10:57:31 PM</td>
+                                                        <td class='linked' test-id='8'>Sign In.Sign In with valid credential.Then I should see application homepage</td>
+                                                        <td><pre><pre>java.lang.ClassCastException: com.sun.proxy.$Proxy38 cannot be cast to org.openqa.selenium.By
+	at pages.HomePage.confirmAdministratorText(HomePage.java:39)
+	at steps.SignInSteps.i_should_see_application_homepage(SignInSteps.java:53)
+	at ?.Then I should see application homepage(SignIn.feature:16)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 2, 2021 10:58:08 PM</td>
+                                                        <td class='linked' test-id='17'>Sign In.Sign In with valid credentials.Sign In with valid credentials.Then I should see application homepage</td>
+                                                        <td><pre><pre>java.lang.ClassCastException: com.sun.proxy.$Proxy38 cannot be cast to org.openqa.selenium.By
+	at pages.HomePage.confirmAdministratorText(HomePage.java:39)
+	at steps.SignInSteps.i_should_see_application_homepage(SignInSteps.java:53)
+	at ?.Then I should see application homepage(SignIn.feature:25)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -475,19 +571,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 2, 2021 11:09:46 PM</div>
+					<div class='panel-lead'>Mar 2, 2021 10:56:52 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 2, 2021 11:11:13 PM</div>
+			 		<div class='panel-lead'>Mar 2, 2021 10:58:16 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>87,188ms</div>
+					<div class='panel-lead'>84,887ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -504,20 +600,20 @@
 						</tr>
 						<tr>
 							<td>@Login</td>
+							<td>0</td>
 							<td>2</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
 							<td>@sanity</td>
+							<td>0</td>
 							<td>2</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -533,31 +629,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 2,
-				failChild: 0,
+				passChild: 0,
+				failChild: 2,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 2,
 				
-				passGrandChild: 14,
-				failGrandChild: 0,
+				passGrandChild: 10,
+				failGrandChild: 2,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 2,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 4,
 			};
 		</script>
 		
@@ -565,6 +661,13 @@
 		
 		
  		<script type='text/javascript'>
+ 			
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
  		</script>
 	</body>
 	

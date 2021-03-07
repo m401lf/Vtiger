@@ -4,7 +4,7 @@
 
 
 <head>
-	<meta charset='utf-8' /> 
+	<meta charset='UTF-8' /> 
 	<meta name='description' content='' />
 	<meta name='robots' content='noodp, noydir' />
 	<meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -15,9 +15,14 @@
 
 		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
 	
-	<title>ExtentReports</title>
+	<title>Automation Reports</title>
 
 	<style type='text/css'>
+			
+            
+                
+            
+        
 	</style>
 </head>
 
@@ -38,7 +43,7 @@
 		</ul>
 
 		<!-- report name -->
-		<span class='report-name'>ExtentReports</span>
+		<span class='report-name'>Automation Report</span>
 		
 		<!-- report headline -->
 		<span class='report-headline'></span>
@@ -47,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Feb 28, 2021 10:39:12 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Mar 2, 2021 10:06:24 PM</span>
 				</a>
 			</li>
 			<li>
@@ -85,8 +90,8 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@LoginUnsuccessful</a></li>
-					<li><a href='#'>@Validcredentials</a></li>
+					<li><a href='#'>@Login</a></li>
+					<li><a href='#'>@sanity</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -134,7 +139,7 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -183,114 +188,123 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Login Page: User Unsuccessful attempts</span>
-						<span class='test-time'>Feb 28, 2021 10:39:13 PM</span>
+						<span class='test-name'>Sign In</span>
+						<span class='test-time'>Mar 2, 2021 10:06:25 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 30s+647ms</span>
+<div class='scenario node' test-id='2' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@sanity</span>
+	</div>
+	<span class='duration right label'>0h 0m 44s+47ms</span>
 	<div class='desc'>
-		<b>ScenarioOutline</b>
-		<span class="desc-text">User should NOT be able to login with invalid credentials</span>
+		<b>Scenario</b>
+		<span class="desc-text">Sign In with valid credential</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario pass' status='pass'>
-			<div class='category-list'>
-				<span class='category label white-text'>@LoginUnsuccessful</span>
-			</div>
+		<li test-id='3' class='node given pass' status='pass'>
 			
-			<b>Scenario</b>
+			<b>Given</b>
 			
-			<span class="bdd-step-name">User should NOT be able to login with invalid credentials</span>
+			<span class="bdd-step-name">Given I am on the Login page URL "http://localhost:8888/index.php?"</span>
+				<div class='pre'>passed</div>
 			
-				<ul class='steps'>
-					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given User is on landing page as "https://automationteststore.com"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='5' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When User clicks the LoginRegister button</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='6' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User enters Login Name as "datastudioplaceWrong"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='7' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User enters Password as "Manchester1"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='8' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When User clicks on Login button</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='9' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then User gets a confirmation message</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='10' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User is still in login page as "RETURNING CUSTOMER"</span>
-							<div class='pre'>passed</div>
-					</li>
-				</ul>
+		</li>
+		<li test-id='4' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I should see Log In Page</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='5' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When I enter username as "admin"</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='6' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter password as "password"</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='7' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And click on login button</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='8' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I should see application homepage</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='9' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I should see administrator text message on home Page</span>
+				<div class='pre'>passed</div>
+			
 		</li>
 	</ul>
 </div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='11'>
-					<div class='test-heading'>
-						<span class='test-name'>Login Page</span>
-						<span class='test-time'>Feb 28, 2021 10:39:45 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='12' status='pass'>
-	<span class='duration right label'>0h 0m 13s+717ms</span>
+<div class='scenariooutline node' test-id='10' status='pass'>
+	<span class='duration right label'>0h 0m 33s+279ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">User should be able to login with valid credentials</span>
+		<span class="desc-text">Sign In with valid credentials</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='13' class='node scenario pass' status='pass'>
+		<li test-id='11' class='node scenario pass' status='pass'>
 			<div class='category-list'>
-				<span class='category label white-text'>@Validcredentials</span>
+				<span class='category label white-text'>@Login</span>
+				<span class='category label white-text'>@sanity</span>
 			</div>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">User should be able to login with valid credentials</span>
+			<span class="bdd-step-name">Sign In with valid credentials</span>
 			
 				<ul class='steps'>
-					<li test-id='14' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given User is on landing page as "https://automationteststore.com"</span>
+					<li test-id='12' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on the Login page URL "http://localhost:8888/index.php?"</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='15' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When User clicks the LoginRegister button</span>
+					<li test-id='13' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should see Log In Page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='14' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I enter username as "admin"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='15' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter password as "password"</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='16' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User enters Login Name as "datastudioplace"</span>
+						<span class="bdd-step-name">And click on login button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='17' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User enters Password as "Manchester1"</span>
+					<li test-id='17' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should see application homepage</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='18' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When User clicks on Login button</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='19' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then User is on Dashboard Page</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='20' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User clicks logoff button</span>
+					<li test-id='18' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I should see administrator text message on home Page</span>
 							<div class='pre'>passed</div>
 					</li>
 				</ul>
@@ -351,7 +365,7 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@LoginUnsuccessful</span>
+						<span class='category-name'>@Login</span>
 						<span class='category-status right'>
 							<span class='label pass'>2</span>
 						</span>
@@ -374,13 +388,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 28, 2021 10:39:13 PM</td>
-										<td class='linked' test-id='1'>Login Page: User Unsuccessful attempts</td>
+										<td>Mar 2, 2021 10:06:25 PM</td>
+										<td class='linked' test-id='1'>Sign In</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 28, 2021 10:39:14 PM</td>
-										<td class='linked' test-id='3'>Login Page: User Unsuccessful attempts.User should NOT be able to login with invalid credentials.User should NOT be able to login with invalid credentials</td>
+										<td>Mar 2, 2021 10:07:13 PM</td>
+										<td class='linked' test-id='11'>Sign In.Sign In with valid credentials.Sign In with valid credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -390,14 +404,14 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Validcredentials</span>
+						<span class='category-name'>@sanity</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -413,8 +427,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 28, 2021 10:39:45 PM</td>
-										<td class='linked' test-id='13'>Login Page.User should be able to login with valid credentials.User should be able to login with valid credentials</td>
+										<td>Mar 2, 2021 10:06:25 PM</td>
+										<td class='linked' test-id='2'>Sign In.Sign In with valid credential</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2021 10:07:13 PM</td>
+										<td class='linked' test-id='11'>Sign In.Sign In with valid credentials.Sign In with valid credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -443,7 +462,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -461,19 +480,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 28, 2021 10:39:12 PM</div>
+					<div class='panel-lead'>Mar 2, 2021 10:06:24 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 28, 2021 10:40:00 PM</div>
+			 		<div class='panel-lead'>Mar 2, 2021 10:07:50 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>47,295ms</div>
+					<div class='panel-lead'>85,511ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -489,7 +508,7 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@LoginUnsuccessful</td>
+							<td>@Login</td>
 							<td>2</td>
 							<td>0</td>
 							<td>0</td>
@@ -498,8 +517,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@Validcredentials</td>
-							<td>1</td>
+							<td>@sanity</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -519,7 +538,7 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 2,
+				passParent: 1,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
@@ -551,6 +570,13 @@
 		
 		
  		<script type='text/javascript'>
+ 			
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
  		</script>
 	</body>
 	
